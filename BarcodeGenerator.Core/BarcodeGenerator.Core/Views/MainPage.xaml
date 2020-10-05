@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeGenerator.Core.Views.MainPage"
+             xmlns:cont="clr-namespace:BarcodeGenerator.Core.Views"
+             xmlns:shades="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             BackgroundColor="{DynamicResource DynamicBackgroundColor}">
+ 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+	        <Style ApplyToDerivedTypes="True" TargetType="shades:Shadows">
+		        <Setter Property="CornerRadius" Value="10" />
+		        <Setter Property="Shades">
+			        <shades:ImmutableShades>
+				        <shades:Shade BlurRadius="10"
+				                      Opacity="1"
+				                      Offset="-10,-10"
+				                      Color="White" />
+				        <shades:Shade BlurRadius="10"
+				                      Opacity="1"
+				                      Offset="6, 6"
+				                      Color="#19000000" />
+			        </shades:ImmutableShades>
+		        </Setter>
+	        </Style>
+		</ResourceDictionary>
+    </ContentPage.Resources>
+ 
+ 
+	<!-- <StackLayout> -->
+	<!-- 	<Grid> -->
+	<!-- 		<Grid.RowDefinitions> -->
+	<!-- 			<RowDefinition Height="*" /> -->
+	<!-- 			<RowDefinition Height="2*" /> -->
+	<!-- 		</Grid.RowDefinitions> -->
+	<!-- 		<Grid.ColumnDefinitions> -->
+	<!-- 			<ColumnDefinition Width="*" /> -->
+	<!-- 			<ColumnDefinition Width="2*" /> -->
+	<!-- 		</Grid.ColumnDefinitions> -->
+	<!-- 		<cont:MyControl x:Name="LeftTopControl" Grid.Row="0" Grid.Column="0" BackgroundColor="LightBlue" /> -->
+	<!-- 		<cont:MyControl x:Name="RightTopControl" Grid.Row="0" Grid.Column="1" BackgroundColor="LightCyan" /> -->
+	<!-- 		<cont:MyControl x:Name="LeftUnderControl" Grid.Row="1" Grid.Column="0" BackgroundColor="LightSkyBlue" /> -->
+	<!-- 		<cont:MyControl x:Name="RightUnderControl" Grid.Row="1" Grid.Column="1" BackgroundColor="LightYellow" /> -->
+	<!-- 	</Grid> -->
+	<!-- 	<Label Text="ここから↓が親Page"></Label> -->
+	<!-- 	<Grid> -->
+	<!-- 		<Grid.RowDefinitions> -->
+	<!-- 			<RowDefinition Height="*"/> -->
+	<!-- 			<RowDefinition Height="*"/> -->
+	<!-- 			<RowDefinition Height="*"/> -->
+	<!-- 		</Grid.RowDefinitions> -->
+	<!-- 		<Grid.ColumnDefinitions> -->
+	<!-- 			<ColumnDefinition Width="*"/> -->
+	<!-- 			<ColumnDefinition Width="*"/> -->
+	<!-- 		</Grid.ColumnDefinitions> -->
+	<!-- 		<Label BindingContext="{x:Reference Name=LeftTopControl}" Text="{Binding Path=NowName}" -->
+	<!-- 		       BackgroundColor="{Binding BackgroundColor}" Grid.Row="0" Grid.Column="0"/> -->
+	<!-- 		<Label BindingContext="{x:Reference Name=RightTopControl}" Text="{Binding Path=NowName}" -->
+	<!-- 		       BackgroundColor="{Binding BackgroundColor}" Grid.Row="0" Grid.Column="1"/> -->
+	<!-- 		<Label BindingContext="{x:Reference Name=LeftUnderControl}" Text="{Binding Path=NowName}" -->
+	<!-- 		       BackgroundColor="{Binding BackgroundColor}" Grid.Row="1" Grid.Column="0"/> -->
+	<!-- 		<Label BindingContext="{x:Reference Name=RightUnderControl}" Text="{Binding Path=NowName}" -->
+	<!-- 		       BackgroundColor="{Binding BackgroundColor}" Grid.Row="1" Grid.Column="1"/> -->
+	<!-- 	</Grid> -->
+	<!-- </StackLayout> -->
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<shades:Shadows Grid.Row="1" Grid.Column="0" CornerRadius="40" Shades="{shades:NeumorphismShades}">
+						<Button WidthRequest="60" HeightRequest="60" Padding="20" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#F0F0F3" CornerRadius="30"/>
+		</shades:Shadows>
+		<shades:Shadows Grid.Row="1"
+		            Grid.Column="1"
+		            CornerRadius="10"
+		            Shades="{shades:NeumorphismShades}">
+			<Button WidthRequest="120"
+			        HeightRequest="60"
+			        HorizontalOptions="Center"
+			        VerticalOptions="Center"
+			        BackgroundColor="#F0F0F3"
+			        CornerRadius="10"
+			        Text="Reset"
+			        TextColor="Gray" />
+
+		</shades:Shadows>
+	</Grid>
+				
+</ContentPage>
