@@ -6,8 +6,8 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="Colors.xaml"/>
-		<ResourceDictionary Source="Text.xaml"/>
+		<!-- <ResourceDictionary Source="Colors.xaml"/> -->
+		<!-- <ResourceDictionary Source="Text.xaml"/> -->
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style ApplyToDerivedTypes="True" TargetType="ContentPage">
